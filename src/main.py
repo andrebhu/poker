@@ -2,9 +2,6 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-import plotly.express as px
-
-from datetime import datetime
 
 import warnings
 
@@ -17,31 +14,36 @@ warnings.filterwarnings("ignore")
 # Player stacks: #2 "Dominic @ QXuBqGcQf6" (11.65) | #3 "Lofty @ 7ZqHgUr-OF" (32.45) | #10 "ForesterMike @ uaTX1DrwsW" (25.90)
 def graph_player_balance(df, name):
 
-    # filter out player stack events and reverse list
+    # filter out player stack entries and reverse list
     player_stacks_df = df[df["entry"].str.contains("Player stacks:")][::-1]
-
 
     balances = []
     for index, row in player_stacks_df.iterrows():
-
         if name not in row["entry"]:
             continue
 
         player_data = row["entry"].replace("Player stacks: ", "").split(" | ")
         
         for d in player_data:
-            if name not in d:
+            data = d.split(" ")
+
+            # find username
+            data_name = data[1][1:]
+            i = 2
+            while data[i] != '@':
+                data_name += " " + data[i]
+                i += 1
+            data_name = data_name.strip()
+
+            if data_name != name:
                 continue
 
-            data = d.split(" ")
             balances.append(round(float(data[-1][1:-1]), 2))
 
     hands = pd.DataFrame(balances, columns=[f'{name}'])
-        
     start = hands.head(1).iloc[0][f'{name}']
     end = hands.tail(1).iloc[0][f'{name}']
     profit = round(end - start, 2)
-
 
 
     # streamlit elements 
@@ -89,6 +91,7 @@ def cleanEntries(df):
 
 
 
+
 ### STREAMLIT STUFF ###
 
 # elements in sidebar
@@ -115,7 +118,6 @@ if uploaded_file is not None:
     st.header(f"{selected_player}'s Stats")
     graph_player_balance(df, selected_player)
     
-
 
     with st.expander("Raw Data"):
         st.dataframe(raw_df)
