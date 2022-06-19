@@ -94,33 +94,55 @@ def cleanEntries(df):
 
 ### STREAMLIT STUFF ###
 
-# elements in sidebar
-uploaded_file = st.sidebar.file_uploader(
-    "Choose a file",
-    type=["csv"]
-)
-
-if uploaded_file is not None:
-    
-    raw_df = pd.read_csv(uploaded_file)
-    df = cleanEntries(raw_df)
-
-    unique_players = find_unique_players(df)
-    selected_player = st.sidebar.selectbox("Choose player", unique_players)
 
 
 
 
 
-# main page
-if uploaded_file is not None:    
+# poker_now_log_pglWlWEZtegA-yro8Y0BC8M-r.csv
+def main():
+    # elements in sidebar
+    uploaded_file = st.sidebar.file_uploader(
+        "Choose a file",
+        type=["csv"]
+    )
 
-    st.header(f"{selected_player}'s Stats")
-    graph_player_balance(df, selected_player)
-    
+    # sample file
+    example_file = st.sidebar.checkbox(
+        "Use example file", value=False
+    )
 
-    with st.expander("Raw Data"):
-        st.dataframe(raw_df)
+    if example_file and uploaded_file is None:
+        uploaded_file = open("../logs/poker_now_log_pglWlWEZtegA-yro8Y0BC8M-r.csv", "r")
 
-else:
-    st.header("pokernow analyzer")
+
+    if uploaded_file is not None:
+        
+        raw_df = pd.read_csv(uploaded_file)
+        df = cleanEntries(raw_df)
+
+        unique_players = find_unique_players(df)
+        selected_player = st.sidebar.selectbox("Choose player", unique_players)
+
+
+
+
+
+    # main page
+    if uploaded_file is not None:    
+
+        st.header(f"{selected_player}'s Stats")
+        graph_player_balance(df, selected_player)
+        
+
+        with st.expander("Raw Data"):
+            st.dataframe(raw_df)
+
+    else:
+        st.header("pokernow analyzer")
+
+
+
+
+if __name__ == "__main__":
+    main()
