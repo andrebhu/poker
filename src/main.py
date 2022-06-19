@@ -113,17 +113,15 @@ def main():
     )
 
     if example_file and uploaded_file is None:
-        uploaded_file = open("../logs/poker_now_log_pglWlWEZtegA-yro8Y0BC8M-r.csv", "r")
+        uploaded_file = open("assets/poker_now_log_pglWlWEZtegA-yro8Y0BC8M-r.csv", "r")
 
 
     if uploaded_file is not None:
-        
         raw_df = pd.read_csv(uploaded_file)
         df = cleanEntries(raw_df)
 
         unique_players = find_unique_players(df)
         selected_player = st.sidebar.selectbox("Choose player", unique_players)
-
 
 
 
