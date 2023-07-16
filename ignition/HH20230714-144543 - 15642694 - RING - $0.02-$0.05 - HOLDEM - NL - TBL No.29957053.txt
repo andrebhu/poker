@@ -1,0 +1,80 @@
+Ignition Hand #4496200551 TBL#29957053 HOLDEM No Limit - 2023-07-14 14:46:11
+Seat 1: Small Blind ($4.95 in chips)
+Seat 2: Big Blind ($1.92 in chips)
+Seat 3: UTG [ME] ($5 in chips)
+Seat 4: UTG+1 ($1.50 in chips)
+Seat 6: Dealer ($2.98 in chips)
+Dealer : Set dealer [6] 
+Small Blind : Small Blind $0.02 
+Big Blind : Big blind $0.05 
+UTG  [ME] : Posts chip $0.05 
+UTG+1 : Posts chip $0.02 
+*** HOLE CARDS ***
+Small Blind : Card dealt to a spot [Qh 8d] 
+Big Blind : Card dealt to a spot [Ac 2h] 
+UTG  [ME] : Card dealt to a spot [Ah Ad] 
+UTG+1 : Card dealt to a spot [Th 7s] 
+Dealer : Card dealt to a spot [6c As] 
+UTG  [ME] : Raises $0.15 to $0.20
+UTG+1 : Folds
+Dealer : Calls $0.20 
+Small Blind : Folds
+Big Blind : Folds
+*** FLOP *** [3h Jh Qd]
+UTG  [ME] : Bets $0.35 
+Dealer : Folds
+UTG  [ME] : Return uncalled portion of bet $0.35 
+UTG  [ME] : Does not show [Ah Ad] (One pair)
+UTG  [ME] : Hand result $0.47 
+*** SUMMARY ***
+Total Pot($0.49)
+Board [3h Jh Qd  ]
+Seat+1: Small Blind Folded before the FLOP
+Seat+2: Big Blind Folded before the FLOP
+Seat+3: UTG $0.47 [Does not show]  
+Seat+4: UTG+1 Folded before the FLOP
+Seat+6: Dealer Folded on the FLOP
+
+
+Ignition Hand #4496200855 TBL#29957053 HOLDEM No Limit - 2023-07-14 14:46:59
+Seat 1: Dealer ($4.93 in chips)
+Seat 2: Small Blind ($1.87 in chips)
+Seat 3: Big Blind [ME] ($5.27 in chips)
+Seat 4: UTG ($1.48 in chips)
+Seat 6: UTG+1 ($2.78 in chips)
+Dealer : Set dealer [1] 
+Small Blind : Small Blind $0.02 
+Big Blind  [ME] : Big blind $0.05 
+*** HOLE CARDS ***
+Dealer : Card dealt to a spot [4h 7c] 
+Small Blind : Card dealt to a spot [9s 2c] 
+Big Blind  [ME] : Card dealt to a spot [8d Ts] 
+UTG : Card dealt to a spot [2d 5c] 
+UTG+1 : Card dealt to a spot [6c 2h] 
+UTG : Folds
+UTG+1 : Folds
+Dealer : Folds
+Small Blind : Calls $0.03 
+Big Blind  [ME] : Checks
+*** FLOP *** [Kh 6h Jc]
+Small Blind : Checks
+Big Blind  [ME] : Checks (timeout)
+*** TURN *** [Kh 6h Jc] [4s]
+Small Blind : Checks
+Big Blind  [ME] : Checks
+*** RIVER *** [Kh 6h Jc 4s] [Qh]
+Small Blind : Checks
+Big Blind  [ME] : Checks
+Small Blind : Showdown [Kh Qh Jc 9s 6h] (High Card)
+Big Blind  [ME] : Showdown [Kh Qh Jc Ts 8d] (High Card)
+Big Blind  [ME] : Hand result $0.10 
+Big Blind  [ME] : Seat sit out
+*** SUMMARY ***
+Total Pot($0.10)
+Board [Kh 6h Jc 4s Qh]
+Seat+1: Dealer Folded before the FLOP
+Seat+2: Small Blind lost with High Card [9s 2c-Kh Qh Jc 9s 6h]  
+Seat+3: Big Blind $0.10  with High Card [8d Ts-Kh Qh Jc Ts 8d]  
+Seat+4: UTG Folded before the FLOP
+Seat+6: UTG+1 Folded before the FLOP
+
